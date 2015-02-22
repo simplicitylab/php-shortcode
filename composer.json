@@ -1,7 +1,7 @@
 {
   "name": "simplicitylab/php-shortcode",
   "description": "PHP ShortCode",
-  "license": "LGPL",
+  "license": "LGPL-2.1",
   "keywords": ["shortcode", "short code"],
   "authors": [
     {
