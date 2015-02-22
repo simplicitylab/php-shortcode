@@ -82,7 +82,7 @@ class PluginDemoTest extends \PHPUnit_Framework_TestCase
 
         // process
         $returnValue = $this->pluginDemo->process($parsed);
-        $this->assertEquals("I'm simple", $returnValue);
+        $this->assertEquals("I'm simple", $returnValue[0]);
     }
 
     public function testProcessParameter()
@@ -107,7 +107,7 @@ class PluginDemoTest extends \PHPUnit_Framework_TestCase
 
         // process
         $returnValue = $this->pluginDemo->process($parsed);
-        $this->assertEquals("I'm repeating hello", $returnValue);
+        $this->assertEquals("I'm repeating hello", $returnValue[0]);
     }
 
 
@@ -133,6 +133,33 @@ class PluginDemoTest extends \PHPUnit_Framework_TestCase
 
         // process
         $returnValue = $this->pluginDemo->process($parsed);
-        $this->assertEquals("hello world", $returnValue);
+        $this->assertEquals("hello world", $returnValue[0]);
+    }
+
+
+    public function testMultipleShortCodes()
+    {
+
+        // lexer : convert into tokens
+        $lexer = new Lexer('[HelloWorld:simple] [HelloWorld:repeat text="glenn"]');
+
+        $tokens = array();
+
+        while ($token = $lexer->nextToken()) {
+            array_push($tokens, $token);
+        }
+
+        $this->assertCount(15, $tokens);
+
+        // parse tokens
+        $parser = new Parser();
+        $parsed = $parser->parse($tokens);
+
+        $this->assertCount(2, $parsed);
+
+        // process
+        $returnValue = $this->pluginDemo->process($parsed);
+        $this->assertEquals("I'm simple", $returnValue[0]);
+        $this->assertEquals("I'm repeating glenn", $returnValue[1]);
     }
 }
