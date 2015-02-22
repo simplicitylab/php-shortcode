@@ -29,10 +29,9 @@
 
 namespace Simplicitylab\PluginDemo\Plugins;
 
-use Simplicitylab\PluginDemo\Interfaces\IPlugin;
+use Simplicitylab\PluginDemo\Interfaces\PluginInterface;
 
-// Declare the interface 'iPlugin'
-class Math implements IPlugin
+class Math implements PluginInterface
 {
 
     public function getMetaInformation()

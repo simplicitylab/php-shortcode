@@ -77,7 +77,7 @@ class PluginDemo
             $this->reflectiveClass = new \ReflectionClass($this->pluginObject);
 
             // be sure that class implented the iPlugin interface
-            if ($this->reflectiveClass->isSubclassOf("Simplicitylab\PluginDemo\Interfaces\iPlugin")) {
+            if ($this->reflectiveClass->isSubclassOf("Simplicitylab\PluginDemo\Interfaces\PluginInterface")) {
                 // be sure that method is implemented
                 if ($this->reflectiveClass->hasMethod($pluginMethod)) {
                     // be sure that the method is public

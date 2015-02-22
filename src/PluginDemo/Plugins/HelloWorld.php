@@ -29,10 +29,9 @@
 
 namespace Simplicitylab\PluginDemo\Plugins;
 
-use Simplicitylab\PluginDemo\Interfaces\IPlugin;
+use Simplicitylab\PluginDemo\Interfaces\PluginInterface;
 
-// Declare the interface 'iPlugin'
-class HelloWorld implements IPlugin
+class HelloWorld implements PluginInterface
 {
     public function getMetaInformation()
     {

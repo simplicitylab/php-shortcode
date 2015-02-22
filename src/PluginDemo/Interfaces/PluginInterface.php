@@ -30,7 +30,7 @@
 namespace Simplicitylab\PluginDemo\Interfaces;
 
 // Declare the interface 'iPlugin'
-interface IPlugin
+interface PluginInterface
 {
     public function getMetaInformation();
 }
