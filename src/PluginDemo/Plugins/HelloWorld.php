@@ -44,11 +44,6 @@ class HelloWorld implements IPlugin
         return $info;
     }
 
-    private function imPrivate()
-    {
-        return "I'm private";
-    }
-
     public function simple()
     {
         return "I'm simple";

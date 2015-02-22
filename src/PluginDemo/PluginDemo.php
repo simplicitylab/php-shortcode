@@ -100,7 +100,6 @@ class PluginDemo
                                 $parameterNotFound = false;
 
                                 foreach ($parameters as $parameter) {
-
                                     // if given parameter is not found in method parameters
                                     // set a flag indicating that the parameter couldn't be found
                                     if (!in_array($parameter['name'], $methodParameters)) {
