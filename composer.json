@@ -16,16 +16,16 @@
   "autoload": {
     "psr-4": {
       "Simplicitylab\\ShortCode\\": "src/ShortCode",
-      "Simplicitylab\\PluginDemo\\": "src/PluginDemo",
-      "Simplicitylab\\PluginDemo\\Interfaces\\": "src/PluginDemo/Interfaces",
-      "Simplicitylab\\PluginDemo\\Plugins\\": "src/PluginDemo/Plugins"
+      "Simplicitylab\\ShortCodePluginDemo\\": "src/ShortCodePluginDemo",
+      "Simplicitylab\\ShortCodePluginDemo\\Interfaces\\": "src/ShortCodePluginDemo/Interfaces",
+      "Simplicitylab\\ShortCodePluginDemo\\Plugins\\": "src/ShortCodePluginDemo/Plugins"
     }
   },
 
   "autoload-dev": {
     "psr-4": {
       "Simplicitylab\\ShortCode\\Test\\": "tests/ShortCode",
-      "Simplicitylab\\PluginDemo\\Test\\": "tests/PluginDemo"
+      "Simplicitylab\\ShortCodePluginDemo\\Test\\": "tests/ShortCodePluginDemo"
     }
   }
 }

@@ -2,7 +2,7 @@
   // include autoloader
   require_once 'vendor/autoload.php';
 
-  use Simplicitylab\PluginDemo\PluginDemo;
+  use Simplicitylab\ShortCodePluginDemo\PluginDemo;
   use Simplicitylab\ShortCode\Lexer;
   use Simplicitylab\ShortCode\Parser;
 

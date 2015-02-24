@@ -27,7 +27,7 @@
  * @version 2.0
  */
 
-namespace Simplicitylab\PluginDemo;
+namespace Simplicitylab\ShortCodePluginDemo;
 
 class PluginDemo
 {
@@ -40,7 +40,7 @@ class PluginDemo
     {
         $this->availablePlugins = array();
 
-        $this->pluginFolderPath = "src" . DIRECTORY_SEPARATOR . "PluginDemo" . DIRECTORY_SEPARATOR . "Plugins";
+        $this->pluginFolderPath = "src" . DIRECTORY_SEPARATOR . "ShortCodePluginDemo" . DIRECTORY_SEPARATOR . "Plugins";
 
         $this->availableFilesInPluginFolder = $this->getFilesInPluginFolder();
     }
@@ -71,13 +71,13 @@ class PluginDemo
     {
         if (in_array($pluginName, $this->availableFilesInPluginFolder)) {
             // create classname including full namespace
-            $className = "Simplicitylab\\PluginDemo\\Plugins\\" . $pluginName;
+            $className = "Simplicitylab\\ShortCodePluginDemo\\Plugins\\" . $pluginName;
 
             $this->pluginObject = new $className();
             $this->reflectiveClass = new \ReflectionClass($this->pluginObject);
 
             // be sure that class implented the iPlugin interface
-            if ($this->reflectiveClass->isSubclassOf("Simplicitylab\PluginDemo\Interfaces\PluginInterface")) {
+            if ($this->reflectiveClass->isSubclassOf("Simplicitylab\ShortCodePluginDemo\Interfaces\PluginInterface")) {
                 // be sure that method is implemented
                 if ($this->reflectiveClass->hasMethod($pluginMethod)) {
                     // be sure that the method is public
@@ -148,7 +148,7 @@ class PluginDemo
                     }
 
                     // create classname including full namespace
-                    $className = "Simplicitylab\\PluginDemo\\Plugins\\" . $pluginName;
+                    $className = "Simplicitylab\\ShortCodePluginDemo\\Plugins\\" . $pluginName;
 
                     // Reflect method
                     $reflectionMethod = new \ReflectionMethod($className, $methodName);

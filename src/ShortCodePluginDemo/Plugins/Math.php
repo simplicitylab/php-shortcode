@@ -27,9 +27,9 @@
  * @version 2.0
  */
 
-namespace Simplicitylab\PluginDemo\Plugins;
+namespace Simplicitylab\ShortCodePluginDemo\Plugins;
 
-use Simplicitylab\PluginDemo\Interfaces\PluginInterface;
+use Simplicitylab\ShortCodePluginDemo\Interfaces\PluginInterface;
 
 class Math implements PluginInterface
 {

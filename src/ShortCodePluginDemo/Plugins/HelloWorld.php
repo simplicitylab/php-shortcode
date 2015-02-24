@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin interface
+ * HelloWorld Plugin
  *
  * Copyright (c) 2010 Glenn De Backer < glenn at simplicity dot be >
  *
@@ -27,10 +27,39 @@
  * @version 2.0
  */
 
-namespace Simplicitylab\PluginDemo\Interfaces;
+namespace Simplicitylab\ShortCodePluginDemo\Plugins;
 
-// Declare the interface 'iPlugin'
-interface PluginInterface
+use Simplicitylab\ShortCodePluginDemo\Interfaces\PluginInterface;
+
+class HelloWorld implements PluginInterface
 {
-    public function getMetaInformation();
+    public function getMetaInformation()
+    {
+        $info = array();
+
+        $info['name']    = "Hello World";
+        $info['version'] = "1.0";
+
+        return $info;
+    }
+
+    public function simple()
+    {
+        return "I'm simple";
+    }
+
+    public function repeat($text)
+    {
+        return "I'm repeating " . $text;
+    }
+
+    public function glue($word_a, $word_b)
+    {
+        return $word_a . " " . $word_b;
+    }
+
+    public function hash($value)
+    {
+        return md5($value);
+    }
 }

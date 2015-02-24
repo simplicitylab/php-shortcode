@@ -6,9 +6,9 @@
  * @author Glenn De Backer < glenn@simplicity.be>
  */
 
-namespace Simplicitylab\PluginDemo\Test;
+namespace Simplicitylab\ShortCodePluginDemo\Test;
 
-use Simplicitylab\PluginDemo\PluginDemo;
+use Simplicitylab\ShortCodePluginDemo\PluginDemo;
 use Simplicitylab\ShortCode\Lexer;
 use Simplicitylab\ShortCode\Parser;
 
@@ -28,7 +28,7 @@ class PluginDemoTest extends \PHPUnit_Framework_TestCase
      */
     protected static function getMethod($name)
     {
-        $class = new \ReflectionClass('Simplicitylab\PluginDemo\PluginDemo');
+        $class = new \ReflectionClass('Simplicitylab\ShortCodePluginDemo\PluginDemo');
         $method = $class->getMethod($name);
         $method->setAccessible(true);
         return $method;
