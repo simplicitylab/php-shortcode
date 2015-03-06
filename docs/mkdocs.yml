@@ -1,0 +1,9 @@
+site_name: PHP-Shortcode
+pages:
+- [index.md, Home]
+- [installation.md, Installation]
+- [architecture.md, Architecture]
+- [plugin_demo.md, Plugin demo]
+- [license.md, License]
+- [About.md, About]
+theme: readthedocs
